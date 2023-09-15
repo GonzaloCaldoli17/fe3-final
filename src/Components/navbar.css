@@ -1,0 +1,24 @@
+/* navbar.css */
+
+.navbar {
+    background-color: #3333330a;
+    color: white;
+    padding: 10px;
+    display: flex; /* Aplicamos flexbox */
+    justify-content: center; /* Centramos horizontalmente */
+    align-items: center; /* Centramos verticalmente */
+    height: 50px; /* Ajusta la altura según tus necesidades */
+  }
+  
+  .navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 0 10px; /* Agrega margen horizontal entre los enlaces si lo deseas */
+  }
+  
+  .navbar a:hover {
+    color: rgb(70, 69, 69);
+  }
+
+  
+  

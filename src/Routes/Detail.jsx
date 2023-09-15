@@ -1,19 +1,39 @@
-import React from 'react'
-
-
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+// import Card from '../Components/Card';
 
 const Detail = () => {
- 
-  // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
+    const navigate = useNavigate();
+    const params = useParams()
+    const [dentista, setDentista] = useState([])
 
-  return (
-    <>
-      <h1>Detail Dentist id </h1>
-      {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
-      {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
-    </>
-  )
+    const getDentista = async()=>{
+        const res = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`)
+        const data = await res.json()
+        setDentista(data([0]))
+    }
+
+    useEffect(()=>{
+        getDentista();
+    }, [params]);
+    
+    const handleGoBack = () => {
+        navigate(-1);
+      };
+
+
+    return (
+        <div>
+            <h2>Numero de Dentista {params.id}</h2>
+            <div className='card'>
+                <p>{dentista.name}</p>
+                <p>{dentista.email}</p>
+                <p>{dentista.company.name} </p>
+            </div>
+            <button onClick={handleGoBack}>Go back</button>
+        </div>
+
+    )
 }
 
 export default Detail
