@@ -10,7 +10,7 @@ const Detail = () => {
     const getDentista = async()=>{
         const res = await fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`)
         const data = await res.json()
-        setDentista(data([0]))
+        setDentista(data)
     }
 
     useEffect(()=>{
@@ -28,7 +28,6 @@ const Detail = () => {
             <div className='card'>
                 <p>{dentista.name}</p>
                 <p>{dentista.email}</p>
-                <p>{dentista.company.name} </p>
             </div>
             <button onClick={handleGoBack}>Go back</button>
         </div>

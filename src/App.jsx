@@ -29,7 +29,7 @@ function App() {
               <Route path="home" element={<Home/>}/>
               <Route path="contacto" element={<Contact/>}/>
               <Route path="favs" element={<Favs/>}/>
-              <Route path="/dentista/:id" component={Detail} />
+              <Route path="/dentista/:id" element={<Detail/>} />
             </Route>
           </Routes>
         </BrowserRouter>

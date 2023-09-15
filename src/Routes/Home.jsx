@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+
 import Card from '../Components/Card'
 import React, { useEffect, useState } from 'react';
 
@@ -21,12 +21,12 @@ const Home = () => {
 
   return (
     <main className="" >
-          
+
        <div className='grid'>
               {dentistas.length 
-                  ? dentistas.map(dentista => (<Link to={`/dentista/${dentista.id}`} key={dentista.id}>
-                  <Card data={dentista} />
-                </Link>))
+                  ? dentistas.map(dentista => 
+                  <Card data={dentista} key={dentista.id} />
+                )
                   : null
               }
       </div>
