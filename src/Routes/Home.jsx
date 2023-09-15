@@ -1,5 +1,6 @@
 
 import Card from '../Components/Card'
+import NavBar from '../Components/Navbar'
 import React, { useEffect, useState } from 'react';
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
@@ -21,6 +22,7 @@ const Home = () => {
 
   return (
     <main className="" >
+      <NavBar/>
 
        <div className='grid'>
               {dentistas.length 

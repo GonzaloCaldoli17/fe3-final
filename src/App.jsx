@@ -3,11 +3,11 @@ import { useState } from "react";
 import ThemeContext, {themes} from "./context";
 import Layout from "./Components/Layout";
 import Footer from "./Components/Footer";
-import Navbar from "./Components/Navbar";
 import Home from "./Routes/Home";
 import Contact from "./Routes/Contact";
 import Favs from "./Routes/Favs";
 import Detail from "./Routes/Detail";
+import LandingPage from './Routes/Landing Page/LandingPage'
 
 
 function App() {
@@ -25,15 +25,13 @@ function App() {
       <Layout>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Navbar/>}>
-              <Route path="home" element={<Home/>}/>
-              <Route path="contacto" element={<Contact/>}/>
-              <Route path="favs" element={<Favs/>}/>
-              <Route path="/dentista/:id" element={<Detail/>} />
-            </Route>
+            <Route path="/" element={<LandingPage/>} />
+            <Route path="home" element={<Home/>}/>
+            <Route path="contacto" element={<Contact/>}/>
+            <Route path="favs" element={<Favs/>}/>
+            <Route path="/dentista/:id" element={<Detail/>} />
           </Routes>
         </BrowserRouter>
-        <Footer/>
       </Layout>
     </ThemeContext.Provider>
       </div>

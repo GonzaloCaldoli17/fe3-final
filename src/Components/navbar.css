@@ -1,6 +1,7 @@
 /* navbar.css */
 
 .navbar {
+    width: 100vw;
     background-color: #3333330a;
     color: white;
     padding: 10px;
