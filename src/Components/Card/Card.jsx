@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom'
+import styles from './styles/card.module.css'
 
 
 const Card = ({ data}) => {
@@ -16,21 +17,22 @@ const Card = ({ data}) => {
   }
 
   return (
-    <div className="card">
+    <div className={styles.card}>
         {/* En cada card deberan mostrar en name - username y el id /}
 
         {/ No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle /}
 
         {/ Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-        <Link to={`/dentista/${data.id}`} key={data.id}>
-          <div className='card'>
+          <div className={styles.info}>
+            <Link className={styles.link} to={`/dentista/${data.id}`} key={data.id}>
               <p>{data.id}</p>
-              <p>{data.name}</p>
-              <p>{data.email} </p>
-              <p>{data.company.name} </p>
+              <p className={styles.name}>{data.name}</p>
+              <p className={styles.p}><strong>Email:</strong><span>{data.email}</span> </p>
+              <p className={styles.p}><strong>Company:</strong> <span>{data.company.name}</span> </p>
+            </Link>
           </div>
-        </Link>
-          <button onClick={addFav} className="favButton">Add fav</button>
+          
+          <button onClick={addFav} className={styles.fav}>Agregar favorito</button>
     </div>
   );
 };

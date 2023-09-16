@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import styles from './styles/form.module.css'
+
 
 const Form = ({ onAddUsuario }) => {
   const [nombre, setNombre] = useState("");
@@ -11,13 +13,13 @@ const Form = ({ onAddUsuario }) => {
       onAddUsuario({ nombre, email });
       setNombre("");
       setEmail("");
-      alert(`Gracias ${nombre}, te contactaremos lo antes posible vía mail.`);
+      alert(`Gracias ${nombre}, te contactaremos lo antes posible vía email.`);
     } else if (nombre.length <= 5) {
       alert("El nombre debe tener más de 5 caracteres.");
     } else if (email.length <= 4) {
-      alert("El email debe tener el formato completo.");
+      alert("El email debe tener el formato correcto.");
     } else {
-      alert("Por favor verifique su información nuevamente.");
+      alert("Por favor, verifique su información nuevamente.");
     }
 
     console.log("Usuario Registrado");
@@ -26,20 +28,22 @@ const Form = ({ onAddUsuario }) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className={styles.form} onSubmit={handleSubmit} >
         <input
+          className={styles.input}
           type="text"
           placeholder="Ingrese su Nombre"
           value={nombre}
           onChange={(e) => setNombre(e.target.value)}
         ></input>
         <input
+          className={styles.input}
           type="email"
           placeholder="Ingrese su Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         ></input>
-        <button type="submit">enviar</button>
+        <button className={styles.button} type="submit">Enviar</button>
       </form>
     </div>
   );

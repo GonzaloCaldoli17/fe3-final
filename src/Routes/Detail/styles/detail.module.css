@@ -1,0 +1,35 @@
+.detail {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../LandingPage/img/espacio-copia-arreglo-cuidado-dental.jpg');
+    background-repeat: no-repeat;
+    top: 0;
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    
+}
+
+.p {
+    font-size: 18px;
+}
+
+.button {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-top: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: rgba(81, 187, 206, 0.781);
+}
+
+.button:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+}

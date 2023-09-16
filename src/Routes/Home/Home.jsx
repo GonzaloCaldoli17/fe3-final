@@ -1,7 +1,8 @@
 
-import Card from '../Components/Card'
-import NavBar from '../Components/Navbar'
+import Card from '../../Components/Card/Card'
+import NavBar from '../../Components/NavBar/Navbar'
 import React, { useEffect, useState } from 'react';
+import styles from './styles/home.module.css'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -24,7 +25,7 @@ const Home = () => {
     <main className="" >
       <NavBar/>
 
-       <div className='grid'>
+       <div className={styles.grid}>
               {dentistas.length 
                   ? dentistas.map(dentista => 
                   <Card data={dentista} key={dentista.id} />

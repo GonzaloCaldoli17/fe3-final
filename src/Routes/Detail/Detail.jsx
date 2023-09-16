@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import styles from './styles/detail.module.css'
+import NavBar from '../../Components/NavBar/Navbar'
 // import Card from '../Components/Card';
 
 const Detail = () => {
@@ -23,13 +25,16 @@ const Detail = () => {
 
 
     return (
-        <div>
-            <h2>Numero de Dentista {params.id}</h2>
-            <div className='card'>
-                <p>{dentista.name}</p>
-                <p>{dentista.email}</p>
+        <div className={styles.detail}>
+            <NavBar/>
+            <div className={styles.card}>
+                <h1>Nombre: {dentista.name}</h1>
+                <div className={styles.p}>
+                    <p><strong>Numero de dentista: </strong>{dentista.id}</p>
+                    <p><strong>Email: </strong>{dentista.email}</p>
+                </div>
+                <button className={styles.button} onClick={handleGoBack}>Volver</button>
             </div>
-            <button onClick={handleGoBack}>Go back</button>
         </div>
 
     )

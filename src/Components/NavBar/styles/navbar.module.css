@@ -1,0 +1,32 @@
+/* navbar.css */
+
+.navbar {
+  width: 100vw;
+  display: flex;
+  padding: 20px 0;
+  background-color: rgba(81, 187, 206, 0.781);
+  }
+
+.links{
+  width: 100vw; 
+  display: flex;
+  justify-content: center;
+  margin-left: 150px;
+}
+
+.link{
+  margin: 0 40px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  font-weight: 700;
+  font-style:oblique;
+}
+.link:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.themeButton {
+  margin-right: 30px;
+}

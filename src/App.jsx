@@ -1,13 +1,12 @@
 import { BrowserRouter, Routes ,Route } from "react-router-dom"
 import { useState } from "react";
 import ThemeContext, {themes} from "./context";
-import Layout from "./Components/Layout";
-import Footer from "./Components/Footer";
-import Home from "./Routes/Home";
-import Contact from "./Routes/Contact";
-import Favs from "./Routes/Favs";
-import Detail from "./Routes/Detail";
-import LandingPage from './Routes/Landing Page/LandingPage'
+import Layout from "./Components/Layout/Layout";
+import Home from "./Routes/Home/Home";
+import Contact from "./Routes/Contact/Contact";
+import Favs from "./Routes/Favs/Favs";
+import Detail from "./Routes/Detail/Detail";
+import LandingPage from './Routes/LandingPage/LandingPage'
 
 
 function App() {
