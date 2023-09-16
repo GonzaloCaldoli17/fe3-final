@@ -27,7 +27,8 @@ const Navbar = () => {
         <div className={styles.themeButton}>
           <button
             onClick={handleChangeTheme}
-            style={{ backgroundColor: theme.background, color: theme.font }}
+            // style={{ backgroundColor: theme.background, color: theme.font}}
+            className={styles.boton}
           >
             Cambiar Tema
           </button>
